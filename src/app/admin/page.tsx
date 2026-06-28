@@ -180,7 +180,7 @@ export default function AdminPortal() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white p-8 font-sans">
+    <div className="min-h-screen bg-white text-black p-8 font-sans">
       <h1 className="text-4xl font-black mb-8 text-fuchsia-500 uppercase tracking-tight">Admin Portal</h1>
 
       {status && (
@@ -192,7 +192,7 @@ export default function AdminPortal() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         {/* Goal Entry Form */}
-        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 shadow-2xl">
+        <div className="bg-gray-900 border border-gray-800 rounded-3xl p-8 shadow-2xl text-white">
           <h2 className="text-2xl font-bold mb-6 text-cyan-400">Log a Goal</h2>
           
           <div className="flex flex-col gap-4">
