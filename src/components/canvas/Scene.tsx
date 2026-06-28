@@ -48,7 +48,7 @@ function WorldCupTrophyImage() {
 
 export default function Scene() {
   return (
-    <div className="fixed inset-0 w-full h-full -z-10 bg-gradient-to-br from-yellow-600 via-red-700 to-white pointer-events-none">
+    <div className="fixed inset-0 w-full h-full -z-10 bg-gradient-to-br from-black via-gray-900 to-black pointer-events-none">
       <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
         <ambientLight intensity={0.5} />
         
