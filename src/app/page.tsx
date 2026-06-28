@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { TOURNAMENT_RULES, ITINERARY } from '@/data/tournamentData';
 import { Users, Shirt, ShieldAlert, Hand, Goal, Flag, Calendar, Clock, Trophy, MapPin } from 'lucide-react';
 
-const IconMap: Record<string, React.ElementType> = {
+const IconMap: any = {
   Users, Shirt, ShieldAlert, Hand, Goal, Flag
 };
 
@@ -66,20 +66,20 @@ export default function Home() {
       <div className="relative z-10">
         
         {/* Navigation */}
-        <nav className="fixed top-0 left-0 w-full p-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px] z-50">
+        <nav className="fixed top-0 left-0 w-full p-4 sm:p-6 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-[2px] z-50">
           <div className="flex items-center gap-2 sm:gap-4">
             <img 
               src="/logo-circle.jpeg" 
               alt="VSA Torch Logo" 
-              className="w-10 h-10 sm:w-14 sm:h-14 mix-blend-screen drop-shadow-md" 
+              className="w-8 h-8 sm:w-14 sm:h-14 mix-blend-screen drop-shadow-md" 
             />
             <img 
               src="/logo-wide.jpeg" 
               alt="VAVA Sports Academy" 
-              className="h-8 sm:h-12 w-auto mix-blend-screen drop-shadow-md" 
+              className="h-6 sm:h-12 w-auto mix-blend-screen drop-shadow-md" 
             />
           </div>
-          <div className="flex gap-6 text-sm font-semibold tracking-wider">
+          <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm font-semibold tracking-wider">
             <a href="#rules" className="hover:text-fuchsia-400 transition-colors">Rules</a>
             <a href="#schedule" className="hover:text-cyan-400 transition-colors">Schedule</a>
             <a href="#teams" className="hover:text-green-400 transition-colors">Teams</a>
@@ -216,7 +216,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="overflow-hidden bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl"
+              className="overflow-x-auto bg-black/40 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl"
             >
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -418,7 +418,7 @@ export default function Home() {
                 <div className="p-6">
                   <p className="text-xs text-white/40 uppercase tracking-widest mb-3 font-semibold">Squad</p>
                   <ul className="flex flex-col gap-2">
-                    {team.players.map((player, pIdx) => (
+                    {team.players.map((player: string, pIdx: number) => (
                       <li key={pIdx} className="text-sm text-gray-300 font-medium flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
                         {player}
