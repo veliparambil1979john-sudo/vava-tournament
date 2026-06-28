@@ -11,8 +11,12 @@
         "Amar",
         "Flynn",
         "Sanskar",
-        "Johnathan & Vicky",
-        "Aziel & Lawson"
+        "Johnathan",
+        "Azeil-U7",
+        "Seren",
+        "Lawson D(PA)",
+        "Vicky D(PA)",
+        "Samuel G(PA)"
       ],
       "stats": {
         "played": 1,
@@ -35,9 +39,13 @@
       "players": [
         "Neal",
         "Chris",
-        "Casper",
-        "Vihaan & Abhishek",
-        "Hasnain, Harnaan & Navid"
+        "Shaurya",
+        "Casper(G)",
+        "Vihaan",
+        "Hasnain",
+        "Harnaan-U7",
+        "Abhishek J(PA)",
+        "Navid A(PA)"
       ],
       "stats": {
         "played": 0,
@@ -60,8 +68,13 @@
       "players": [
         "Liam",
         "Shree",
-        "Arkin & Melvin",
-        "Cayden & Brijay"
+        "Arkin",
+        "Cayden",
+        "Wisdom",
+        "Ambrosia(G)",
+        "Melvin G(PA)",
+        "Brijay M(PA)",
+        "Amanda J(PA-F)"
       ],
       "stats": {
         "played": 0,
@@ -83,10 +96,14 @@
       "countryCode": "br",
       "players": [
         "Jazeel",
-        "Pranav Shinde",
+        "Pranav",
         "Fion",
-        "Aiden & Desmond",
-        "Shabaz & Sameer"
+        "Aiden",
+        "Rehan",
+        "Kiaan R",
+        "Shabaz H",
+        "Desmond G(PA)",
+        "Sameer H(PA)"
       ],
       "stats": {
         "played": 0,
@@ -102,15 +119,20 @@
     {
       "id": 5,
       "captain": "Saksham",
-      "name": "Dragon FC",
+      "name": "Japan 2026",
       "country": "Japan",
       "flag": "🇯🇵",
       "countryCode": "jp",
       "players": [
         "Jake",
-        "Cleatus",
-        "Alsiten & Macwin",
-        "Josh & Irish"
+        "Cletus",
+        "Alstin",
+        "Joshua",
+        "Elon-U7",
+        "Aiden",
+        "Irish P(PA)",
+        "Macwin F(PA)",
+        "Primas G(PA)"
       ],
       "stats": {
         "played": 0,
@@ -126,16 +148,20 @@
     {
       "id": 6,
       "captain": "Snedden",
-      "name": "Golden Eagle",
+      "name": "Golden Eagles",
       "country": "Germany",
       "flag": "🇩🇪",
       "countryCode": "de",
       "players": [
-        "Jared",
+        "Jarred",
         "Devansh",
-        "Zidane",
-        "Anwil & Savio",
-        "Orrin & Ajit"
+        "Anwil",
+        "Paarth",
+        "Aiden D",
+        "Jeeshan",
+        "Savio D(PA)",
+        "Ajit D(PA)",
+        "Abhijeet(PA)"
       ],
       "stats": {
         "played": 0,
@@ -159,8 +185,12 @@
         "Yug",
         "Irwin",
         "Ezekiel",
-        "Harvey & Nixen",
-        "Lars & Samuel"
+        "Harvey",
+        "Lars-U7",
+        "Wayne",
+        "Nixon C(PA)",
+        "Samuel A(PA)",
+        "Ratikanta K(PA)"
       ],
       "stats": {
         "played": 0,
@@ -182,10 +212,14 @@
       "countryCode": "gb-sct",
       "players": [
         "Sean",
-        "Riall R.",
+        "Riall",
         "Rudra",
-        "Juan & Renold",
-        "Jayden & Maxwell"
+        "Juan",
+        "Jayden MG",
+        "Zidaan",
+        "Atik S(PA)",
+        "Renold G(PA)",
+        "Maxwell G(PA)"
       ],
       "stats": {
         "played": 1,
