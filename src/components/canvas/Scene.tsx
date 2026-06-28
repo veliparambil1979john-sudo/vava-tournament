@@ -49,14 +49,15 @@ function WorldCupTrophyImage() {
 
 export default function Scene() {
   return (
-    <div className="fixed inset-0 w-full h-full -z-10 bg-gradient-to-b from-[#1c003a] via-black to-[#0a0014] pointer-events-none">
+    <div className="fixed inset-0 w-full h-full -z-10 bg-gradient-to-br from-[#4a0404] via-[#023020] to-[#000033] pointer-events-none">
       <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.5} />
         
-        {/* World Cup 2026 Neon Lighting Scheme */}
-        <directionalLight position={[5, 10, 5]} intensity={1.5} color="#FF00FF" /> {/* Magenta */}
-        <directionalLight position={[-5, -10, -5]} intensity={1.5} color="#00FF00" /> {/* Neon Green */}
-        <pointLight position={[0, 3, 5]} intensity={2} color="#00FFFF" /> {/* Cyan highlight */}
+        {/* World Cup 2026 Official Colors (Red, Green, Blue) */}
+        <directionalLight position={[5, 10, 5]} intensity={2.5} color="#FF0000" /> {/* Red */}
+        <directionalLight position={[-5, -10, -5]} intensity={2.5} color="#00FF00" /> {/* Green */}
+        <pointLight position={[0, 3, 5]} intensity={3} color="#0088FF" /> {/* Blue highlight */}
+
         
         <Stars radius={100} depth={50} count={5000} factor={4} saturation={1} fade speed={1.5} />
         
