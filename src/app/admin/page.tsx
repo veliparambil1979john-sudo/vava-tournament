@@ -103,7 +103,7 @@ export default function AdminPortal() {
     // Recalculate based on completed matches (matches with events or scores > 0)
     newData.matches.forEach((match: any) => {
       if (match.score1 === 0 && match.score2 === 0 && match.events.length === 0) return; // Unplayed
-      if (match.id.startsWith("SF") || match.id === "EX" || match.id === "F") return; // Skip knockouts for league table
+      // Allow all matches to calculate towards points and stats
 
       const t1 = newData.teams.find((t: any) => t.name === match.team1);
       const t2 = newData.teams.find((t: any) => t.name === match.team2);
