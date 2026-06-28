@@ -14,6 +14,7 @@ export default function AdminPortal() {
   const [minute, setMinute] = useState("");
   const [second, setSecond] = useState("");
   const [isDoubleGoal, setIsDoubleGoal] = useState(false);
+  const [isOwnGoal, setIsOwnGoal] = useState(false);
   
   // Edit Teams State
   const [editTeam1, setEditTeam1] = useState("");
@@ -62,7 +63,7 @@ export default function AdminPortal() {
 
     // Add event
     newData.matches[matchIndex].events.push({
-      type: "goal",
+      type: isOwnGoal ? "own_goal" : "goal",
       team: selectedTeam,
       player: selectedPlayer,
       time: timeString,
@@ -71,18 +72,24 @@ export default function AdminPortal() {
 
     // Update Match Score
     const pointsToAdd = isDoubleGoal ? 2 : 1;
-    if (selectedTeam === newData.matches[matchIndex].team1) {
+    let scoringTeam = selectedTeam;
+    if (isOwnGoal) {
+       scoringTeam = (selectedTeam === newData.matches[matchIndex].team1) ? newData.matches[matchIndex].team2 : newData.matches[matchIndex].team1;
+    }
+
+    if (scoringTeam === newData.matches[matchIndex].team1) {
       newData.matches[matchIndex].score1 += pointsToAdd;
     } else {
       newData.matches[matchIndex].score2 += pointsToAdd;
     }
 
     setData(newData);
-    setStatus(`Goal logged for ${selectedPlayer} at ${timeString}. (${isDoubleGoal ? "2 POINTS" : "1 POINT"}). Remember to calculate and publish!`);
+    setStatus(`Goal logged for ${selectedPlayer} at ${timeString}. (${isDoubleGoal ? "2 POINTS" : "1 POINT"})${isOwnGoal ? " [OWN GOAL]" : ""}. Remember to calculate and publish!`);
     setSelectedPlayer("");
     setMinute("");
     setSecond("");
     setIsDoubleGoal(false);
+    setIsOwnGoal(false);
   };
 
   const handleCalculate = () => {
@@ -345,6 +352,26 @@ export default function AdminPortal() {
                   <div>
                     <div className="font-bold text-fuchsia-400">2x Goal (Women / Child 2019+)</div>
                     <div className="text-xs text-fuchsia-200/60">Counts as 2 goals for the team</div>
+                  </div>
+                </label>
+
+                <label className="flex items-center gap-3 mt-2 p-4 bg-red-950/40 border border-red-900 rounded-xl cursor-pointer hover:bg-red-900/40 transition-colors">
+                  <div className="relative flex items-center">
+                    <input 
+                      type="checkbox" 
+                      className="w-6 h-6 appearance-none border-2 border-red-500 rounded-md checked:bg-red-600 transition-colors cursor-pointer"
+                      checked={isOwnGoal}
+                      onChange={(e) => setIsOwnGoal(e.target.checked)}
+                    />
+                    {isOwnGoal && (
+                      <svg className="absolute w-4 h-4 text-white left-1 top-1 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </div>
+                  <div>
+                    <div className="font-bold text-red-400">Own Goal</div>
+                    <div className="text-xs text-red-200/60">Awards point(s) to the opposing team</div>
                   </div>
                 </label>
                 
