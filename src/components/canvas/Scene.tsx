@@ -9,7 +9,7 @@ function WorldCupTrophyImage() {
   const groupRef = useRef<THREE.Group>(null);
   
   // Load the image texture. We assume the user saved it as 'trophy.png' in public directory.
-  const texture = useTexture('/trophy.png');
+  const texture = useTexture('/Images/i-2-90900493-fifa-world-cup-logo-813x457.jpg');
 
   useFrame((state) => {
     if (!groupRef.current) return;
@@ -34,9 +34,8 @@ function WorldCupTrophyImage() {
             <planeGeometry args={[8, 5]} />
             <meshStandardMaterial 
               map={texture} 
-              transparent={true}
-              depthWrite={false}
-              blending={THREE.AdditiveBlending} // This removes the black background and makes the golden trophy glow!
+              transparent={false}
+              depthWrite={true}
               roughness={0.2}
               metalness={0.5}
             />
