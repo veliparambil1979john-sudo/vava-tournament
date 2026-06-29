@@ -172,7 +172,7 @@ export default function Home() {
                 {[...TEAMS].sort((a, b) => b.stats.points !== a.stats.points ? b.stats.points - a.stats.points : b.stats.goalDifference - a.stats.goalDifference).map((team, index) => (
                   <tr 
                     key={team.id} 
-                    className={`border-b border-white/5 hover:bg-white/5 transition-colors ${index < 4 ? 'bg-gradient-to-r from-cyan-900/20 to-transparent' : ''}`}
+                    className={`border-b hover:bg-white/5 transition-colors ${team.name === 'Mighty Kickers' ? 'bg-gradient-to-r from-green-900/50 via-yellow-900/30 to-transparent border-l-4 border-l-green-500 border-white/10' : index < 4 ? 'bg-gradient-to-r from-cyan-900/20 to-transparent border-white/5' : 'border-white/5'}`}
                   >
                     <td className="py-4 px-6 text-center">
                       <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full font-bold ${index < 4 ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/5 text-gray-500'}`}>
