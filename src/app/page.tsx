@@ -431,6 +431,54 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Results Gallery */}
+        <section id="results" className="py-24 px-4 sm:px-8 max-w-7xl mx-auto mb-24">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mb-16 text-center"
+          >
+            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white mb-4">
+              Tournament <span className="text-purple-400">Results</span>
+            </h2>
+            <div className="w-24 h-2 bg-gradient-to-r from-purple-400 to-fuchsia-600 rounded-full mx-auto" />
+            <p className="mt-6 text-gray-400 font-semibold tracking-wider uppercase text-sm">Highlights & Champions</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+            {[
+              "31e50427-0c95-4d8b-814d-c1983c123d3b.jpg",
+              "6b403de7-5ea1-481f-bab7-40b9f21dd93a.jpg",
+              "WhatsApp Image 2026-06-27 at 7.00.51 PM.jpeg",
+              "WhatsApp Image 2026-06-27 at 7.09.45 PM.jpeg",
+              "WhatsApp Image 2026-06-27 at 9.32.19 PM.jpeg",
+              "WhatsApp Image 2026-06-27 at 9.33.34 PM.jpeg",
+              "b7761998-9254-48e8-bf61-30fa02bc82d6.jpg",
+              "c42dc02c-eb39-4cb7-8f65-877f0ad5767c.jpg",
+              "de251ddc-9b25-47ff-a788-1dd1f95e6683.jpg",
+              "e8fbce1d-9e78-4b16-8320-f40bd0ee4b3d.jpg"
+            ].map((img, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.02 }}
+                viewport={{ once: true }}
+                transition={{ delay: (idx % 4) * 0.1 }}
+                className="group relative aspect-square rounded-2xl overflow-hidden bg-black/40 border border-white/10 shadow-lg cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300" />
+                <img 
+                  src={`/Images/${encodeURIComponent(img)}`}
+                  alt={`Result ${idx + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="border-t border-white/10 py-12 text-center text-white/30 text-sm font-semibold tracking-wider">
           <p>VAVA SPORTS ACADEMY © 2026. PRACTICE. ACHIEVE. WIN.</p>
