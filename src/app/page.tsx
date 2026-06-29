@@ -446,14 +446,9 @@ export default function Home() {
             <p className="mt-6 text-gray-400 font-semibold tracking-wider uppercase text-sm">Highlights & Champions</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:px-12">
             {[
               "31e50427-0c95-4d8b-814d-c1983c123d3b.jpg",
-              "6b403de7-5ea1-481f-bab7-40b9f21dd93a.jpg",
-              "WhatsApp Image 2026-06-27 at 7.00.51 PM.jpeg",
-              "WhatsApp Image 2026-06-27 at 7.09.45 PM.jpeg",
-              "WhatsApp Image 2026-06-27 at 9.32.19 PM.jpeg",
-              "WhatsApp Image 2026-06-27 at 9.33.34 PM.jpeg",
               "b7761998-9254-48e8-bf61-30fa02bc82d6.jpg",
               "c42dc02c-eb39-4cb7-8f65-877f0ad5767c.jpg",
               "de251ddc-9b25-47ff-a788-1dd1f95e6683.jpg",
@@ -465,8 +460,8 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.02 }}
                 viewport={{ once: true }}
-                transition={{ delay: (idx % 4) * 0.1 }}
-                className="group relative aspect-square rounded-2xl overflow-hidden bg-black/40 border border-white/10 shadow-lg cursor-pointer"
+                transition={{ delay: (idx % 3) * 0.1 }}
+                className="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-black/40 border border-white/10 shadow-2xl cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 duration-300" />
                 <img 
