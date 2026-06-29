@@ -5,6 +5,7 @@ import Scene from '@/components/canvas/Scene';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { TOURNAMENT_RULES, ITINERARY } from '@/data/tournamentData';
 import { Users, Shirt, ShieldAlert, Hand, Goal, Flag, Calendar, Clock, Trophy, MapPin } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 const IconMap: any = {
   Users, Shirt, ShieldAlert, Hand, Goal, Flag
@@ -437,6 +438,28 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
+            onViewportEnter={() => {
+              const duration = 2500;
+              const end = Date.now() + duration;
+              const frame = () => {
+                confetti({
+                  particleCount: 5,
+                  angle: 60,
+                  spread: 55,
+                  origin: { x: 0, y: 0.8 },
+                  colors: ['#009c3b', '#ffdf00', '#002776']
+                });
+                confetti({
+                  particleCount: 5,
+                  angle: 120,
+                  spread: 55,
+                  origin: { x: 1, y: 0.8 },
+                  colors: ['#009c3b', '#ffdf00', '#002776']
+                });
+                if (Date.now() < end) requestAnimationFrame(frame);
+              };
+              frame();
+            }}
             className="mb-16 text-center"
           >
             <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-white mb-4">
