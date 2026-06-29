@@ -75,18 +75,18 @@ export default function SplashScreen() {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 1.5, opacity: 0 }}
                 transition={{ type: "spring", bounce: 0.5, duration: 1 }}
-                className="text-center px-4"
+                className="text-center px-4 w-full"
               >
-                <div className="inline-block relative">
+                <div className="inline-block relative w-full">
                    <div className="absolute inset-0 bg-yellow-500 blur-3xl opacity-30 rounded-full" />
-                   <h1 className="relative text-5xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-orange-600 uppercase tracking-tighter drop-shadow-2xl mb-4">
+                   <h1 className="relative text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-orange-600 uppercase tracking-tighter drop-shadow-2xl mb-4 leading-tight">
                      Congratulations
                    </h1>
                 </div>
-                <h2 className="text-3xl md:text-6xl font-bold text-white uppercase tracking-widest mt-2">
+                <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold text-white uppercase tracking-widest mt-2">
                   Mighty Kickers
                 </h2>
-                <p className="text-green-400 mt-6 font-semibold tracking-[0.2em] uppercase">Champions of Season 3</p>
+                <p className="text-green-400 mt-4 sm:mt-6 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase">Champions of Season 3</p>
               </motion.div>
             )}
 
@@ -97,30 +97,30 @@ export default function SplashScreen() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ scale: 1.1, opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className="max-w-2xl w-full mx-4 p-8 bg-gradient-to-br from-green-900/50 to-black border border-green-500/30 rounded-3xl shadow-[0_0_50px_rgba(74,222,128,0.2)] text-center relative overflow-hidden"
+                className="max-w-2xl w-[calc(100%-2rem)] mx-auto p-5 sm:p-8 bg-gradient-to-br from-green-900/80 to-black border border-green-500/30 rounded-3xl shadow-[0_0_50px_rgba(74,222,128,0.2)] text-center relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
                 <div className="relative z-10">
-                  <h3 className="text-4xl font-black text-white mb-6 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">The Winning Squad</h3>
+                  <h3 className="text-2xl sm:text-4xl font-black text-white mb-4 sm:mb-6 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">The Winning Squad</h3>
                   
-                  <div className="flex flex-wrap justify-center gap-3 mb-8">
+                  <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
                     {mightyKickers.players.map((player, idx) => (
-                      <div key={idx} className="px-5 py-2.5 bg-black/50 backdrop-blur-md rounded-full text-green-300 font-bold border border-green-500/20 shadow-lg uppercase text-sm tracking-wider">
+                      <div key={idx} className="px-3 sm:px-5 py-1.5 sm:py-2.5 bg-black/50 backdrop-blur-md rounded-full text-green-300 font-bold border border-green-500/20 shadow-lg uppercase text-[10px] sm:text-sm tracking-wider">
                         {player}
                       </div>
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 text-center border-t border-white/10 pt-8">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 text-center border-t border-white/10 pt-6 sm:pt-8">
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-widest font-bold mb-2">Coach</p>
-                      <p className="text-2xl font-black text-white">{mightyKickers.captain}</p>
+                      <p className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2">Coach</p>
+                      <p className="text-lg sm:text-2xl font-black text-white">{mightyKickers.captain}</p>
                     </div>
                     <div>
-                      <p className="text-gray-400 text-xs uppercase tracking-widest font-bold mb-2">Representing</p>
-                      <p className="text-2xl font-black text-white flex items-center justify-center gap-3">
-                        <img src={`https://flagcdn.com/w40/${mightyKickers.countryCode}.png`} alt="flag" className="w-8 rounded-sm shadow-md" />
-                        {mightyKickers.country}
+                      <p className="text-gray-400 text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2">Representing</p>
+                      <p className="text-lg sm:text-2xl font-black text-white flex items-center justify-center gap-2 sm:gap-3">
+                        <img src={`https://flagcdn.com/w40/${mightyKickers.countryCode}.png`} alt="flag" className="w-6 sm:w-8 rounded-sm shadow-md" />
+                        <span className="truncate">{mightyKickers.country}</span>
                       </p>
                     </div>
                   </div>

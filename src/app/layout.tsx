@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 import SplashScreen from "@/components/SplashScreen";
+import ConfettiButton from "@/components/ConfettiButton";
 
 export default function RootLayout({
   children,
@@ -31,6 +32,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <SplashScreen />
+        <ConfettiButton />
         {children}
       </body>
     </html>
